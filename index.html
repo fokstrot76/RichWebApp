@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kung Fu</title>
+		<link rel="stylesheet" href="style.css" />	
+		<link rel="stylesheet" href="themes/dragonstyle.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.icons-1.4.0.css" />
+		<link rel="stylesheet"  href="icon/icon-pack-custom.css" />
+		<link rel="stylesheet" type="text/css" href="APIStyles.css">
+	<!--scripts--> 
+	
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>	
+		<script src="scripts/jquery.ui.map.js"></script>
+		<script src="scripts/jquery.ui.map.services.js"></script>		
+		<script src="scripts/jquery.ui.map.extensions.js"></script>
+		<script type="text/javascript" src="flickrAPI.js"></script>
+		<!--<script type="text/javascript" src="jquery.gmap.min.js"></script>-->
+		<script src="myscript.js"></script>
+		<script type="text/javascript" src="youtube.js"></script>
+		<script type="text/javascript" src="script.js"></script><!--my own jquery code-->
+		<script src="gmap.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-----------Page Home-------------->
+	<div id="home" data-role="page" data-theme="a">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Home</h1>
+			
+			<div class="fb-like" data-href="https://www.facebook.com/Dragonstylekungfudublin" data-width="10" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+			
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>					
+				</ul>  
+			</div>
+		</div>
+		<div data-role="content" data-theme="a">		
+			<h3 id="offer">What we offer</h3>		
+			<br>
+			<ul data-role="listview" id="text">
+				<li><a href="#" class="ui-link" id="style">Dragon Style Kung fu</a></li>
+				<li><a href="#" class="ui-link" id="health">Health & Fitness</a></li>
+				<li><a href="#" class="ui-link" id="defence">Self Defence</a></li>
+				<li><a href="#" class="ui-link" id="qigong">Qigong</a></li>
+				<li><a href="#" class="ui-link" id="iron">Ironfist & Ironbody conditioning</a></li>
+				<li><a href="#" class="ui-link" id="dance">Traditional Chinese Lion Dance</a></li>
+				<li><a href="#" class="ui-link" id="jiao">Shuai Jiao</a></li>
+				<li><a href="#" class="ui-link" id="lei">Lei Tai Fighting</a></li>
+			</ul>
+			<div id="blog">
+				<h2>Welcome to Dragonstyle Ireland</h2>
+			<h3>You can now train at the authentic Dragonstyle Kungfu with Sifu Kurt Scott, a traditional Sifu of 30 years with a strong relationship with Dragonstyle Hong Kong and UK</h3>
+				<img src="themes/images/sifu.jpg" alt="Kurt Scott" id="sifu">
+			</div>		
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+					<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+					<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+					<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+<!--------End Page Home-------------->
+<!-----------Page Style-------------->
+	<div id="style" data-role="page" data-theme="a">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Style</h1>			
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>
+				</ul>  
+			</div>
+		</div>
+		<div data-role="content" data-theme="a">
+			<h1>Dragon Style</h1>
+			<p>Modern Southern Dragon style's history can be reliably traced back to the mon​k Daai Yuk Sim Si who was the abbot of Wa Sa Tou (White Hair) temple on Mount Loufu
+Southern Dragon style has roots in Hakka Kuen, a combination of the local styles of the Hakka heartland in inland eastern Guangdoa with the style that the monk Ji Si Si Sim taught in Guangdong and the neighboring province of Fujian in the 18th century.</p>
+		<div id="motto">
+			<u>Southern Dragon style motto:</u>
+			<p style="display: none">"Control yourself, let others do what they will.​ This does not mean you are weak.​ Control your heart, obey the principles of life.​ This does not mean others are stronger."​</p>
+		</div>
+			<p>Southern Dragon kung fu is essentially an internal, qi (pronounced chi) cultivating method, but initial training is far more like a hard, external style, than the delicate approach an internal (like ​Tai Chi Chuan or Baguazhang) would have. In learning the moves, the student will strike hard, block hard and stomp into each position, with the idea of learning the proper place to be once each movement is complete. Eventually, the method of transmitting power is retained, and the physically strengthened body is able to make transitions in the proper, fluid manner. In turn, this dragon-like smoothness helps disguise the attack, making it extremely difficult for an adversary to effectively counter.</p>
+			<p>Dragon Style  (Dragon form) focuses mainly on powerful, short range attacks, as is common among southern Chinese styles of kung fu. However, the styles' use of gripping and seizing techniques as well as the extensive use of the forearms both offensively and defensively are fairly unique to the art. The style was created as an aggressive combat art and operates under the basic assumption that you are trying to either disable your opponent to the point that they are no longer a threat in battle, or kill them, though these are not by any means the only options a Dragon Style practitioner has. As such Dragon Style employs a large number of techniques to damage the opponent's joints either through joint manipulation or direct striking; nullify the opponent's defenses either through breaking their stance or compromising their guard, and thus their ability to defend; and others. Like most southern style kung fu, it has limited kicks and jumps and consisted mainly of fist, palm and clawing techniques. Power generated from the waist using soft hard jin (see neijin and waijin).​
+Dragon Style training also involves an extensive amount of iron body training. Hardening the forearms especially is considered essential to the style as it makes such extensive use of them. Depending on the particular school any of a fairly large pool of traditional training methods will be used to toughen the body. Three, five and seven star conditioning drills, pea buckets, weighted ropes, sand bags, and striking poles are all common in Dragon Style schools. It really isn't possible to separate Lung Ying conditioning from its methods, the two work hand in hand, each needing the other to be completely effective.​</p>
+			<p>In Southern Dragon style, leg work is characterized by a zig-zag motion that mimics the imagined movement of the mythical Chinese dragon. This also allows one to use floating and sinking movements which are very important in generating power and stability, making your body calm and relaxed.​
+Though the Lung Ying footwork pool is deep, it generally centers around two basic types of stepping. The first is "Zig Zag" stepping (dragon stepping). Basically with each step forward, the rear foot moves forward and becomes the forward foot. However, the step is not taken directly forward but basically follows the angle the front foot is turned at (about 33 degrees). This has the effect of moving the DS player forward and off to an angle while offering some protection to the groin from attack. This type of stepping allows a lung ying player to press his opponent (usually used before the opponent's center has been taken) while launching attacks from angles that are difficult for the opponent to defend. The DS player seems to be constantly moving into an uncomfortable range and at an angle that forces their opponent to reposition their whole body to defend against, or else torque their torso around thus breaking their structure and disconnecting them from the power generation machinery of their lower body.​
+The second basic type of stepping is Bik Bo stepping, or press stepping. In this method the front foot moves forward and the rear foot drags up to get back to the basic position. This stepping generally covers less distance than the dragon stepping, and is used to press the opponent. It will frequently be used once the DS player has begun to press their attack in earnest or is exploiting some advantage. There are specific methods for stretching this footwork out addressed in various forms. One of the primary purposes of this footwork is to keep the DS player "on top of" their opponent and in attacking range. Also, this type of stepping is heavily used in various stance breaking methods.​</p>	
+		<img src="../images/KwongYiu.jpg" alt="Present Leader" class="leaders">
+		<div id="leung">
+				<u>KwongYiu Leung - Chairman of the Hung Shui Kiu Branch</u>
+				<p style="display: none">KwongYiu Leung - Chairman of the Hung Shui Kiu Hong Kong branch of Lung Ying started his Dragonstyle training in 1969 training in Hong Kong under Grandmaster Chui Chung.KwongYiu Leung and his classmates still actively promote and pass-on the teachings of Dragonstyle in the way it was imparted to them by Grandmaster Chui Chung. KwongYiu Leung’s passion for the style of Lung Ying is more than evident, promoting Dragonstyle when and wherever he can. His mission is to have all of the sub-branches of the HSK branch demonstrate Lung Ying (dragonstyle) in the same fashion to keep the teachings of his master pure and unchanged for generations to come. He also want’s to grow the followers of Lung Ying throughout the globe. His teachings of Lung Ying are both practical and true to tradition.</p>
+		</div>
+	<img src="../images/Kctsang.jpg" alt="Great Grand Master" class="leaders">
+	<div id="tsang">
+				<u>Kong Chiu Tsang - Grandmaster</u>
+				<p style="display: none">Grandmaster K.C. Tsang has practiced Lung Ying since 1969. Starting his training in Hong Kong he quickly rose to the position of one of the senior students due to his handwork and understanding of Lung Ying (dragonstyle) and the teachings of his Sifu – Grandmaster Chui Chung. Moving to the United Kingdom in the 70’s to develop his business he also continued to promote Dragonstyle in the UK teaching many students. Today after 40+ years he is still plays an active roll in the promotion of the style in the UK and Hong Kong. Sifu Tsang was one of the first masters to promote and demonstrate Dragonstyle and in fact Kungfu and Chinese Lion Dance in public throughout the UK. At Chinese New Year Celebrations he could be seen on stage in Leicester Square, London leading the Dragonstyle Troop.</p>
+	</div>
+	<img src="../images/ChuiChung.jpg" alt="Great Grand Master" class="leaders">
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+					<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+					<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+					<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--------End Page Style-------------->
+<!-----------Page Classes-------------->
+	<div id="classes" data-role="page" data-theme="a">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Classes</h1>			
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>				
+				</ul>  
+			</div>
+		</div>
+		<div data-role="content" data-theme="a">
+		<img src="images/hall.jpg" alt="hall" id="hall">
+		<div id="classes">
+			<img src="images/dragon.jpg" alt="logo" id="logo">
+			<h3>Class Schedule</h3>
+			<p>Classes are available on both weeknights and on weekends</p>
+			<table>
+				<tr>
+					<th>Class Times:</th>
+				</tr>
+				<tr>
+					<td>Tuesday</td>
+					<td>7pm- 9pm</td>
+				</tr>
+				<tr>
+					<td>Thursday</td>
+					<td>7pm- 9pm</td>
+				</tr>
+				<tr>
+					<td>Saturday</td>
+					<td>12pm- 3pm</td>
+				</tr>
+			</table>
+		</div>
+		  <div data-role="main" class="ui-content">
+			<a href="#dialog">***Free lessons***</a>
+			<div data-role="collapsibleset">
+				<div data-role="collapsible">
+					<h1>Facilities</h1>
+					<p>Our facility is a traditional style kung fu Kwoon which comprises of a 60 feet training hall, a fully equipped traditional style conditioning room and changing facilities. The Kwoon (school) was created in a very traditional style inline with the kung fu schools of old, our aim is to promote, preserve and continue the teachings of our ancestors while introducing others to the benefits of Dragon Style Kung fu.</p>
+				</div>
+				<div data-role="collapsible">
+					<h1>Our Training Hall (Kungfu Kwoon)</h1>
+					<p>Our training hall is decorated in an old school look to make the student feel connected to the old masters and feel inspired to train as hard as they did , thus ensuring the student reaches their full potential. The training hall due to its large size is perfect for practicing the basic movements of the style, the more complexed and challenging forms (sets), weapon sets and the traditional Lion dance routines.</p>
+				</div>
+				<div data-role="collapsible">
+					<h1>Our Conditioning Room</h1>
+					<p>This space is purpose designed to facilitate the development of the students Iron body and Ironfist training. These traditional training methods used are very old and not easily available or even understood nowadays. The room is fully equipped with wooden dummies, ironfist training aids & iron body training equipment. The training of these methods is very hard and slow to see results as rushing will result in more harm than good. To complement the training the student must gain an understanding of basic anatomy and TCM (chinese medicine) . All students will use Dit Da Jow  (fall & hit Wine) in conjuction with their training</p>
+				</div>
+			</div>
+		  </div>
+		  
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+					<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+					<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+					<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!--DIALOG page-->
+<div data-role="page" data-dialog="true" id="dialog">
+  <div data-role="header">
+    <h1>Let's do it!</h1>
+  </div>
+
+  <div data-role="content" class="ui-content" id="dialogBody">
+		<p>Your <b>first lesson</b>is free, if you bring a friend, you get <br><b>two free lessons</b>.</p>
+		<p>For every additional person you introduce to the style you get a <b>free lesson</b>.</p>
+		<a href="#classes">Go back</a>
+	  </div>
+
+  <div data-role="footer">
+    <h1>Are you ready for free lesson?</h1>
+  </div>
+</div> 
+<!--------End Page Classes-------------->
+<!-----------Page Instructor-------------->
+	<div id="instructor" data-role="page" data-theme="a">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Instructor</h1>			
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>					
+				</ul>  
+			</div>
+		</div>
+		<div data-role="content" data-theme="a">
+			<h2>Your Instructor - Dragonstyle Sifu</h2>
+			<img src="images/kurtOnStage.jpg" alt="Kurt on Stage" id="kurtOnStage">
+			<p>My Name is Kurt Scott and I have practiced Dragon Style Kungfu ​since 1984, joining the style at the tender age of 9. I found it very hard but most rewarding as it thought me coordination through movement, it made me appreciate the effort needed to attain fitness and most importantly it thought me discipline...which has helped me to acheive a lot in my personal life.</p>
+			<p>Having now trained at Dragon Style for 28 years i have found it to be beneficial to both my health and my character as it instils good values.
+			On the self defence side the style is an excellent system for defence when called upon, although it is strictly emphasized that fighting when a member of the school will not be tolerated unless it is in a self defence mode.The style itself is very hard and demanding but if the practitioner can stick the training then they will see great benefits.</p>
+			<p>Within the school I teach the Dragon curriculum, Ironfist & Ironbody conditioning, Qigong and traditional chinese lion dance.I have found Dragon Style Kungfu to be an excellent style which ticks all the boxes for me as it encompasses all the elements of a traditional art that i require...If you chose to start dragon style then i wish you well in your training and hope you to will find the style of great importance to your life...</p>
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+					<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+					<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+					<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--------End  Instructor Page-------------->
+<!--------Contact Page-------------->
+	<div id="contact" data-role="page" data-theme="a">
+	
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Contact</h1>
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>					
+				</ul>  
+			</div>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<p>Shandon Gardens, Dublin 7</p>
+			<p>info@dragonkungfu.ie</p>
+			<p id="phone">+353879354688</p><a href="https://www.facebook.com/Dragonstylekungfudublin"><img src="images/facebook.jpg" alt="facebook" id="facebook"></a>
+			<br>
+			<a href="#mail" class="ui-btn">Click to send message</a>
+			<!--
+				<form data-parsley-validate method="post" action="../contact.php" data-ajax="false">
+				  Name: <input type="text" id="name" name="name" value="" placeholder="Namer" /><br>
+				  E-mail: <input type="email" id="mail" name="mail" value="" placeholder="E-mail" /><br>
+				  Phone Number: <input type="tel" id="telefoon" name="telefoon" value="" placeholder="Phone"/><br>
+				  Subject: <input type="text" id="onderwerp" name="onderwerp" value="" placeholder="Subject" /><br>
+				  Message:<br>
+				  <textarea style="height:100px;" id="bericht" name="bericht" placeholder="Enter your message here..." required></textarea> <br />
+				  <input type="submit" value="Send" name="submit" class="btn">
+				 </form>
+			</div>	-->
+			<div data-role="content">
+				<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<div id="map" style="height:300px;"></div>
+					<a id="submit" href="#" data-role="button" data-icon="search">Get directions</a>
+				</div>
+				<div id="results" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" style="display:none;">
+					<div class="ui-li ui-li-divider ui-btn ui-bar-b ui-corner-top ui-btn-up-undefined">Results</div>
+					<div id="directions"></div>
+					<div class="ui-li ui-li-divider ui-btn ui-bar-b ui-corner-bottom ui-btn-up-undefined"></div>
+				</div>
+			</div>
+	
+		</div>
+
+		<div data-role="footer" data-theme="a" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+						<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+						<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+						<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	
+	<div id="mail" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<a href="#contact" data-icon="back" data-iconpos="notext" data-direction="reverse">Videos</a>
+			<h1>Send message</h1>
+		</div> <!--end of header-->
+		<div data-role="content">
+			<div id="sendMail">Temporary please use deskotp version to send message.<br> Please click the <a href = "../contact.php">link</a>. <br>Thank you</div>
+		</div> <!--end of content-->
+	</div> <!--end of blogpost-->
+	
+<!--------End  Contact Page-------------->
+<!--------Success Page-------------->
+		<div id="succes" data-role="page" data-theme="a">
+		<div data-role="header">
+			<h1>Sent Succesful</h1>
+			<a data-icon="home" data-rel="back" style="margin-top:2px;">Home</a>
+		</div>
+		<div data-role="content" data-theme="a">	
+		 <p>The contact form was sent succesful!</p>
+		 </form>
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+						<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+						<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+						<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<div id="error" data-role="page" data-theme="a">
+		<div data-role="header">
+			<h1>Error</h1>
+			<a data-icon="home" data-rel="back" style="margin-top:2px;">Home</a>
+		</div>
+		<div data-role="content" data-theme="a">	
+			<p>The contact form was not sent because of an error!</p>
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+						<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+						<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+						<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+<!--------End  Success Page-------------->
+<!--------Blog Page-------------->
+	<div id="Blog" data-theme="a" data-role="page" data-title="View Source: Blog">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Blog</h1>
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>					
+				</ul>  
+			</div>
+		</div><!-- header -->
+		
+		<div data-theme="a"
+			data-role="content"
+			id="postlist">
+		</div><!-- content -->
+		
+		<div data-role="footer" data-theme="a" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+						<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+						<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+						<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+					</ul>
+				</div>
+		</div><!-- footer -->
+	</div><!-- page -->
+	
+	<script src="http://dragonkungfu.ie/wordpress/?json=recentstories&callback=listPosts" type="text/javascript"></script>
+	
+	<div id="blogpost" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<a href="#Blog" data-icon="back" data-iconpos="notext" data-direction="reverse">Videos</a>
+			<h1>Post</h1>
+		</div> <!--end of header-->
+		<div data-role="content">
+			<div id="mypost"></div>
+		</div> <!--end of content-->
+	</div> <!--end of blogpost-->
+	
+	<!-----------youtube Style-------------->
+	<div id="Youtube" data-role="page"  data-theme="a">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Youtube</h1>			
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>
+				</ul>  
+			</div>
+		</div>
+
+		
+		<div data-role="content">
+			<div class="ui-grid-a" id="videolist">
+			</div><!-- grid -->
+		</div>
+		
+
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+					<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+					<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+					<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div id="videoplayer"
+		data-role="page">
+		<div data-role="header"
+			data-position="fixed"
+			data-theme="a">
+			<a href="#Youtube"
+				data-transition="fade"
+				data-icon="back"
+				data-iconpos="notext"
+				data-direction="reverse"
+				>Videos</a>
+			<h1>Videos</h1>
+		</div><!-- header -->
+		<div data-role="content">
+			<div id="myplayer"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+
+	<script src="http://gdata.youtube.com/feeds/users/Dragonstylenorthside/uploads?alt=json-in-script&max-results=10&callback=listVideos" type="text/javascript"></script>
+
+<!--------End youtube Style-------------->
+
+<!-----------flickr Style-------------->
+	<div id="Flickr" data-role="page"  data-theme="a">
+		<div data-role="header" id="header" data-position="fixed">
+			<img src="themes/images/dragon.png" alt="dragon" id="dragon">
+			<h1 id="current">Flickr</h1>			
+			<div data-role="navbar">
+				<ul id="nav">
+					<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#style" data-role="button" data-icon="strikethrough">Style</a></li>
+					<li><a href="#classes" data-role="button" data-icon="bell">Classes</a></li>
+					<li><a href="#instructor" data-role="button" data-icon="user-md">Instructor</a></li>
+				</ul>  
+			</div>
+			</div>
+
+			<div data-role-"content" data-theme="a">
+				<div class="ui-grid-c" id="photolist">
+				</div><!-- grid -->
+			</div><!-- content -->
+			
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#contact" data-role="button" data-icon="mail">Contact</a></li>
+					<li><a href="#Youtube" data-role="button" data-icon="youtube-square">Youtube</a></li>
+					<li><a href="#Flickr" data-role="button" data-icon="camera-retro">Flickr</a></li>
+					<li><a href="#Blog" data-role="button" data-icon="krw">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page"
+		id="showphoto">
+		<div data-role="header"
+			data-position="fixed"
+			data-theme="a">
+			<a href="#Flickr"
+				data-transition="fade"
+				data-icon="back"
+				data-iconpos="notext"
+				>Photos</a>
+			<h1>Photos</h1>
+		</div><!-- header -->
+		<div data-role="content">
+			<div id="myphoto"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+
+	<script src="http://api.flickr.com/services/feeds/photos_public.gne?id=129525745@N04&format=json&tags=DragonKungFu" type="text/javascript"></script>
+
+<!--------End flickr Style-------------->
+
+</body>
+</html>
